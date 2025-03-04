@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity 0.8.24;
 
-import "./ERC721.sol";
+import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
 import "@openzeppelin/contracts/utils/Counters.sol";
 
@@ -12,7 +12,13 @@ contract BadgeSbt is ERC721, Ownable {
     Counters.Counter private _tokenIdCounter;
 
     // Constructor: Set the contract name and symbol
-    constructor() ERC721("#1 Highest Mining Speed", "Zombie Mining Champ") Ownable(msg.sender){}
+    constructor(
+        string memory name,
+        string memory symbol,
+        string memory tokenUri
+    ) ERC721(name, symbol) Ownable(msg.sender){
+        uri = tokenUri;
+    }
 
     // Batch mint SBTs: Mint multiple SBTs at once, and all SBTs are minted to the contract owner
     function mintBatchToOwner(uint256 quantity) public onlyOwner {
