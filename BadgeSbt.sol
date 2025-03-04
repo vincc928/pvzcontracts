@@ -65,10 +65,6 @@ contract BadgeSbt is ERC721, Ownable {
         return uri;
     }
 
-    function _beforeTransfer(address from, address to, uint256 tokenId) public virtual override {
-        require((from == owner()), "Soulbound: Only owner can transfer");
-    }
-
     function approve(address to, uint256 tokenId) public virtual override {
         revert("Soulbound: Approve not allowed");
     }
