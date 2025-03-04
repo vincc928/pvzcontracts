@@ -8,7 +8,7 @@ import "@openzeppelin/contracts/utils/cryptography/SignatureChecker.sol";
 
 /// @notice OFT is an ERC-20 token that extends the OFTCore contract.
 // MINT ZGP
-contract ZGPContract is ERC20, EIP712 {
+contract ZGP is ERC20, EIP712 {
 
     struct Mint{
         address account;
