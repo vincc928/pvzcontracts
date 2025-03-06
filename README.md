@@ -22,10 +22,4 @@ Combining NFT collections and token economics to create a next-gen GameFi experi
 ### Smart Contracts
 ```solidity
 contracts/
-├── BadgeSbt.sol
-├── ZGP.sol
-├── BatchSendEther.sol
-├── ZombieNFT.sol
-├── FusionNFT.sol
-├── ZombieSbt.sol
-└── ZP.sol
+── ZP.sol
