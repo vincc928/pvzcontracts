@@ -3,7 +3,7 @@ const hre = require("hardhat");
 async function main() {
   const [deployer] = await hre.ethers.getSigners();
 
-  const TelgatherToken = await hre.ethers.getContractFactory("ZPToken");
+  const TelgatherToken = await hre.ethers.getContractFactory("MyFT");
   let token = await TelgatherToken.deploy(
     "Zombie Power",
     "ZP",
