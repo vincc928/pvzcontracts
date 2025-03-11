@@ -9,7 +9,7 @@ import { OFT } from "@layerzerolabs/lz-evm-oapp-v2/contracts/oft/OFT.sol";
 
 /// @notice OFT is an ERC-20 token that extends the OFTCore contract.
 // _initialSupply
-contract MyFT is OFT {
+contract ZP is OFT {
     constructor(
         string memory _name,
         string memory _symbol,
