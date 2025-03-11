@@ -5,7 +5,7 @@ const multisig = "";
 async function main() {
   const [deployer] = await hre.ethers.getSigners();
 
-  const TelgatherToken = await hre.ethers.getContractFactory("MyFT");
+  const TelgatherToken = await hre.ethers.getContractFactory("ZP");
   let token = await TelgatherToken.deploy(
     "Zombie Power",
     "ZP",
